@@ -1,6 +1,7 @@
 package url
 
 import (
+	"log"
 	"net/url"
 	"testing"
 )
@@ -23,4 +24,6 @@ func TestQuery(t *testing.T) {
 	if u.RawQuery != "k=v&id=main&id=omit&array[]=first&array[]=second&ids[i]=111&ids[j]=3.14" {
 		t.Error("RawQuery error")
 	}
+
+	log.Println(u.Query())
 }
