@@ -22,6 +22,7 @@ func TestQuery(t *testing.T) {
 	}
 
 	if u.RawQuery != "k=v&id=main&id=omit&array[]=first&array[]=second&ids[i]=111&ids[j]=3.14" {
+		log.Println(u.RawQuery)
 		t.Error("RawQuery error")
 	}
 
